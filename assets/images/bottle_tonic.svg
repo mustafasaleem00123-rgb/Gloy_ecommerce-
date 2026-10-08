@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FAF7FD"/><stop offset="100%" stop-color="#F3E8FF"/></linearGradient>
+    <linearGradient id="bottle" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#E9D8FD"/><stop offset="50%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#D6BCFA"/></linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="20" fill="url(#bg)"/>
+  <ellipse cx="200" cy="340" rx="60" ry="10" fill="#2D1B4E" opacity="0.1" filter="blur(4px)"/>
+  <g>
+    <rect x="185" y="80" width="30" height="35" rx="3" fill="#D4AF37"/>
+    <path d="M 160 115 L 240 115 L 245 315 Q 245 325 230 325 L 170 325 Q 155 325 155 315 Z" fill="url(#bottle)"/>
+    <rect x="165" y="160" width="70" height="120" rx="3" fill="#FFFFFF"/>
+    <text x="200" y="190" font-family="'Playfair Display', serif" font-size="11" font-weight="bold" fill="#2D1B4E" text-anchor="middle">AURA</text>
+    <text x="200" y="212" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="600" fill="#6B46C1" text-anchor="middle">RESURFACING</text>
+    <text x="200" y="224" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" fill="#806B9E" text-anchor="middle">AHA/BHA TONIC</text>
+  </g>
+</svg>

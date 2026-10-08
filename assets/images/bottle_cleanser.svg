@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7FD"/>
+      <stop offset="100%" stop-color="#E9D5FF"/>
+    </linearGradient>
+    <linearGradient id="bottle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9F7AEA"/>
+      <stop offset="50%" stop-color="#D6BCFA"/>
+      <stop offset="100%" stop-color="#805AD5"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="15" stdDeviation="10" flood-color="#2D1B4E" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="20" fill="url(#bg)"/>
+  <ellipse cx="200" cy="340" rx="60" ry="10" fill="#6B46C1" opacity="0.15" filter="blur(4px)"/>
+  <g filter="url(#shadow)">
+    <!-- Pump Dispenser -->
+    <rect x="185" y="65" width="30" height="8" rx="2" fill="#FFFFFF"/>
+    <path d="M 200 73 L 200 95 M 175 73 L 200 73" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <rect x="188" y="95" width="24" height="25" fill="#6B46C1"/>
+    <!-- Bottle Body -->
+    <path d="M 160 120 L 240 120 Q 250 120 250 135 L 245 315 Q 245 325 230 325 L 170 325 Q 155 325 155 315 L 150 135 Q 150 120 160 120 Z" fill="url(#bottle)"/>
+    <path d="M 162 135 L 160 310" stroke="#FFFFFF" stroke-width="5" opacity="0.45" stroke-linecap="round"/>
+    <!-- Label -->
+    <rect x="165" y="160" width="70" height="120" rx="4" fill="#FFFFFF" opacity="0.96"/>
+    <text x="200" y="190" font-family="'Playfair Display', serif" font-size="11" font-weight="bold" fill="#2D1B4E" text-anchor="middle">AURA</text>
+    <line x1="180" y1="198" x2="220" y2="198" stroke="#6B46C1" stroke-width="1"/>
+    <text x="200" y="214" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" fill="#6B46C1" text-anchor="middle">BOTANICAL</text>
+    <text x="200" y="226" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" fill="#806B9E" text-anchor="middle">CLEANSER</text>
+    <text x="200" y="250" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="600" fill="#2D1B4E" text-anchor="middle">LAVENDER &amp; OAT</text>
+  </g>
+</svg>

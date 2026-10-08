@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7FD"/>
+      <stop offset="100%" stop-color="#E9D5FF"/>
+    </linearGradient>
+    <linearGradient id="jar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#F5EEFE"/>
+      <stop offset="100%" stop-color="#E9D8FD"/>
+    </linearGradient>
+    <linearGradient id="lid" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6B46C1"/>
+      <stop offset="50%" stop-color="#805AD5"/>
+      <stop offset="100%" stop-color="#4A2E78"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#2D1B4E" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="20" fill="url(#bg)"/>
+  <ellipse cx="200" cy="330" rx="80" ry="14" fill="#2D1B4E" opacity="0.1" filter="blur(4px)"/>
+  <g filter="url(#shadow)">
+    <!-- Lid -->
+    <rect x="130" y="150" width="140" height="35" rx="6" fill="url(#lid)"/>
+    <line x1="140" y1="158" x2="260" y2="158" stroke="#FFFFFF" stroke-width="2" opacity="0.35"/>
+    <!-- Jar Body -->
+    <path d="M 135 185 L 265 185 Q 275 185 270 205 L 260 300 Q 255 315 235 315 L 165 315 Q 145 315 140 300 L 130 205 Q 125 185 135 185 Z" fill="url(#jar)"/>
+    <path d="M 142 195 L 148 295" stroke="#9F7AEA" stroke-width="5" opacity="0.3" stroke-linecap="round"/>
+    <!-- Label -->
+    <rect x="155" y="210" width="90" height="75" rx="3" fill="#FFFFFF"/>
+    <text x="200" y="232" font-family="'Playfair Display', serif" font-size="11" font-weight="bold" fill="#2D1B4E" text-anchor="middle">AURA</text>
+    <line x1="180" y1="238" x2="220" y2="238" stroke="#6B46C1" stroke-width="1"/>
+    <text x="200" y="252" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="600" fill="#6B46C1" text-anchor="middle">BARRIER REPAIR</text>
+    <text x="200" y="264" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" fill="#806B9E" text-anchor="middle">CERAMIDE CREAM</text>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7FD"/>
+      <stop offset="100%" stop-color="#F3E8FF"/>
+    </linearGradient>
+    <linearGradient id="tube" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#F5EEFE"/>
+      <stop offset="100%" stop-color="#E9D8FD"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6B46C1"/>
+      <stop offset="100%" stop-color="#4A2E78"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#2D1B4E" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="20" fill="url(#bg)"/>
+  <ellipse cx="200" cy="340" rx="55" ry="10" fill="#2D1B4E" opacity="0.1" filter="blur(4px)"/>
+  <g filter="url(#shadow)">
+    <!-- Top Crimped Edge -->
+    <path d="M 160 85 L 240 85 L 245 95 L 155 95 Z" fill="#E9D5FF"/>
+    <!-- Tube Body -->
+    <path d="M 155 95 L 245 95 L 230 270 L 170 270 Z" fill="url(#tube)"/>
+    <!-- Cap -->
+    <rect x="165" y="270" width="70" height="35" rx="5" fill="url(#cap)"/>
+    <!-- Text on Tube -->
+    <text x="200" y="145" font-family="'Playfair Display', serif" font-size="12" font-weight="bold" fill="#2D1B4E" text-anchor="middle">AURA</text>
+    <line x1="175" y1="153" x2="225" y2="153" stroke="#6B46C1" stroke-width="1"/>
+    <text x="200" y="170" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="bold" fill="#6B46C1" text-anchor="middle">INVISIBLE SHIELD</text>
+    <text x="200" y="184" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" fill="#554470" text-anchor="middle">SUNSCREEN</text>
+    <rect x="175" y="200" width="50" height="22" rx="11" fill="#6B46C1"/>
+    <text x="200" y="215" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SPF 50+</text>
+  </g>
+</svg>

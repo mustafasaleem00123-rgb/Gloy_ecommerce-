@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7FD"/>
+      <stop offset="100%" stop-color="#F3E8FF"/>
+    </linearGradient>
+    <linearGradient id="bottle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6B46C1"/>
+      <stop offset="40%" stop-color="#9F7AEA"/>
+      <stop offset="70%" stop-color="#B794F4"/>
+      <stop offset="100%" stop-color="#553C9A"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#FFF3A7"/>
+      <stop offset="100%" stop-color="#AA820A"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="15" stdDeviation="12" flood-color="#2D1B4E" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" rx="20" fill="url(#bg)"/>
+  <ellipse cx="200" cy="330" rx="65" ry="12" fill="#6B46C1" opacity="0.15" filter="blur(4px)"/>
+  <g filter="url(#shadow)">
+    <!-- Dropper Top -->
+    <path d="M 185 80 Q 200 65 215 80 L 210 95 L 190 95 Z" fill="#2D1B4E"/>
+    <rect x="182" y="95" width="36" height="15" rx="3" fill="url(#cap)"/>
+    <!-- Bottle Neck -->
+    <rect x="188" y="110" width="24" height="20" fill="url(#cap)"/>
+    <!-- Bottle Body -->
+    <rect x="145" y="130" width="110" height="180" rx="20" fill="url(#bottle)"/>
+    <!-- Glass Highlight -->
+    <path d="M 155 145 Q 160 220 155 295" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.5" fill="none"/>
+    <!-- Label -->
+    <rect x="155" y="170" width="90" height="100" rx="4" fill="#FFFFFF" opacity="0.96"/>
+    <text x="200" y="200" font-family="'Playfair Display', serif" font-size="12" font-weight="bold" fill="#2D1B4E" text-anchor="middle">AURA</text>
+    <line x1="175" y1="208" x2="225" y2="208" stroke="#6B46C1" stroke-width="1"/>
+    <text x="200" y="224" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#6B46C1" text-anchor="middle">LUMINOUS</text>
+    <text x="200" y="236" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" fill="#806B9E" text-anchor="middle">PURPLE SERUM</text>
+    <text x="200" y="255" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" fill="#2D1B4E" text-anchor="middle">15% VITAMIN C</text>
+  </g>
+</svg>

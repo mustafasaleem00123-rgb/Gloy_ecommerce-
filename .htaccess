@@ -1,0 +1,19 @@
+# Sensitive files ko browser se download hone se roknay ke liye (Apache 2.4)
+<FilesMatch "(^\.env|^\.env\.example|\.db|\.sql|^\.gitignore)$">
+    Require all denied
+</FilesMatch>
+
+# Production: errors screen par kabhi nahi (security.php bhi display_errors band karta hai)
+Options -Indexes
+<IfModule mod_php.c>
+    php_flag display_errors off
+    php_flag log_errors on
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag display_errors off
+    php_flag log_errors on
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag display_errors off
+    php_flag log_errors on
+</IfModule>

@@ -1,0 +1,711 @@
+/* ==========================================================================
+   Gloy Skincare - Warm Organic Botanical Aesthetic (Sage & Terracotta)
+   ========================================================================== */
+
+.hero-luxury-section {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 68% 35%, #F4EFEA 0%, #FAF7F2 65%, #FFFFFF 100%);
+  padding: 70px 0 90px;
+}
+
+/* Ambient Radial Glow */
+.hero-ambient-glow {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  width: 550px;
+  height: 550px;
+  transform: translate(50%, -50%);
+  background: radial-gradient(circle, rgba(124, 139, 111, 0.12) 0%, rgba(201, 124, 93, 0.08) 50%, transparent 75%);
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-luxury-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 48px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Static Target Wrappers */
+.hero-parallax-text {
+  transform: none !important;
+}
+
+.hero-3d-wrap {
+  transform: none !important;
+}
+
+/* Entrance Animations: Left Text Content */
+.hero-anim-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-anim-left.delay-1 { transition-delay: 0.15s; }
+.hero-anim-left.delay-2 { transition-delay: 0.35s; }
+.hero-anim-left.delay-3 { transition-delay: 0.55s; }
+
+.hero-anim-left.is-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Entrance Animations: Right Floating Glass Capsules */
+.hero-anim-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-anim-right.delay-1 { transition-delay: 0.4s; }
+.hero-anim-right.delay-2 { transition-delay: 0.65s; }
+.hero-anim-right.delay-3 { transition-delay: 0.85s; }
+
+.hero-anim-right.is-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(234, 240, 230, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid #D2DEC8;
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7C8B6F;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 20px rgba(124, 139, 111, 0.08);
+}
+
+.pill-sparkle {
+  color: #7C8B6F;
+  font-size: 0.9rem;
+  animation: pulseSparkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseSparkle {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.25); opacity: 1; }
+}
+
+.hero-luxury-title {
+  font-family: var(--font-serif);
+  font-size: 4.25rem;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: #2B2420;
+  margin-bottom: 24px;
+}
+
+.hero-luxury-title em {
+  font-style: italic;
+  font-family: var(--font-serif);
+  color: #7C8B6F;
+  font-weight: 400;
+}
+
+.hero-subtitle-desc {
+  font-size: 1.15rem;
+  color: var(--text-body);
+  margin-bottom: 36px;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.btn-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 34px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, #7C8B6F 0%, #667459 100%);
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(124, 139, 111, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+}
+
+.btn-hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(124, 139, 111, 0.35);
+  color: #FFFFFF;
+}
+
+.btn-hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid #E8E2D9;
+  backdrop-filter: blur(8px);
+  color: #2B2420;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-hero-secondary:hover {
+  border-color: #7C8B6F;
+  color: #7C8B6F;
+  background: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Trust Bar: Avatars & Rating */
+.hero-trust-bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-top: 22px;
+  border-top: 1px solid #E8E2D9;
+}
+
+.avatar-group {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  background-size: cover;
+  background-position: center;
+  margin-left: -12px;
+  box-shadow: 0 4px 12px rgba(43, 36, 32, 0.1);
+}
+
+.avatar-group .avatar-img:first-child {
+  margin-left: 0;
+}
+
+.trust-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.trust-stars {
+  color: #F59E0B;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.trust-score {
+  color: #2B2420;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.trust-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* 3D Canvas Outer Wrap */
+.hero-3d-wrap {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-3d-canvas {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  cursor: grab;
+}
+
+#hero-3d-canvas:active {
+  cursor: grabbing;
+}
+
+/* Frosted Glass Floating Capsules */
+.glass-capsule {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid #E8E2D9;
+  padding: 14px 22px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 32px rgba(43, 36, 32, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 10;
+  animation: floatOrb 5s ease-in-out infinite alternate;
+}
+
+.glass-capsule.capsule-top-right {
+  top: 10%;
+  right: 0%;
+}
+
+.glass-capsule.capsule-bottom-left {
+  bottom: 14%;
+  left: -2%;
+  animation-delay: 2.2s;
+}
+
+.glass-capsule.capsule-bottom-right {
+  bottom: 4%;
+  right: 12%;
+  animation-delay: 3.5s;
+}
+
+.glass-capsule-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #EAF0E6;
+  color: #7C8B6F;
+  border: 1px solid #D2DEC8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.glass-capsule-val {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2B2420;
+  line-height: 1.1;
+}
+
+.glass-capsule-lbl {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Bento Grid System ("The Science & Ritual") */
+.bento-section {
+  padding: 100px 0;
+  background-color: var(--bg-main);
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.bento-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(124, 139, 111, 0.4);
+}
+
+.bento-large {
+  grid-column: span 2;
+}
+
+.bento-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary-purple);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.bento-title {
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+}
+
+.bento-desc {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+/* 360-Degree Product Customizer & Formula Selector */
+.visualizer-section {
+  background: #F4EFEA;
+  padding: 100px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.formula-selector-bar {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.formula-btn {
+  background: var(--bg-surface);
+  border: 2px solid var(--border-color);
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all var(--transition-fast);
+}
+
+.formula-btn.active,
+.formula-btn:hover {
+  border-color: var(--primary-purple);
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+  color: var(--primary-purple);
+}
+
+.formula-color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+@keyframes floatOrb {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-14px); }
+}
+
+/* Responsive Overrides */
+@media (max-width: 992px) {
+  .hero-luxury-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-luxury-title {
+    font-size: 3rem;
+  }
+  .hero-subtitle-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-large {
+    grid-column: span 1;
+  }
+  .hero-3d-wrap {
+    height: 420px;
+  }
+}
+
+/* ==========================================================================
+   Integrated Hero Container & Floating Glass Cards (Matching Reference Banner)
+   ========================================================================== */
+.hero-integrated-container {
+  background-color: #FAF7F2;
+  padding: 0 0 40px 0;
+  min-height: auto;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hero-banner-card.hero-fullwidth-card {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  box-shadow: 0 16px 44px rgba(43, 36, 32, 0.06);
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Transparent Overlay Navbar inside Hero Banner Canvas */
+.hero-card-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 60px;
+  background: linear-gradient(180deg, rgba(250, 247, 242, 0.8) 0%, rgba(250, 247, 242, 0) 100%);
+}
+
+.hero-bg-banner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(250, 247, 242, 0.12) 0%, rgba(43, 36, 32, 0.18) 100%);
+  pointer-events: none;
+}
+
+/* Hero Content Overlay Left (Subtitle + Shop CTA) */
+.hero-left-overlay-box {
+  position: absolute;
+  left: 60px;
+  bottom: 60px;
+  z-index: 10;
+  max-width: 480px;
+}
+
+.hero-overlay-tagline {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #2B2420;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 12px rgba(255, 255, 255, 0.7);
+}
+
+/* Floating Glass Cards */
+.hero-glass-card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 14px 20px;
+  box-shadow: 0 16px 36px rgba(43, 36, 32, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 12;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(43, 36, 32, 0.16);
+}
+
+/* Top-Right Story Card */
+.story-card-float {
+  top: 100px;
+  right: 60px;
+}
+
+.story-thumb {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.story-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-badge {
+  position: absolute;
+  inset: 0;
+  background: rgba(43, 36, 32, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 1.1rem;
+}
+
+.story-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #7C8B6F;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.story-title {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #2B2420;
+  margin: 2px 0 0;
+}
+
+/* Bottom-Left Bestseller Card */
+.bestseller-card-float {
+  bottom: 32px;
+  left: 32px;
+  max-width: 320px;
+}
+
+.glass-card-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #2B2420;
+  cursor: pointer;
+  opacity: 0.6;
+  line-height: 1;
+  transition: opacity 0.2s ease;
+}
+
+.glass-card-close:hover {
+  opacity: 1;
+}
+
+.bestseller-thumb {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.bestseller-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bestseller-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.bestseller-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #C97C5D;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.bestseller-title {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2B2420;
+  margin: 2px 0 4px;
+  line-height: 1.3;
+}
+
+.bestseller-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: #F59E0B;
+}
+
+.bestseller-rating span {
+  color: #2B2420;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+@media (max-width: 768px) {
+  .hero-banner-card {
+    border-radius: 18px;
+  }
+  .hero-image-wrapper {
+    min-height: 480px;
+  }
+  .hero-bg-banner {
+    min-height: 480px;
+  }
+  .hero-left-overlay-box {
+    left: 20px;
+    bottom: 24px;
+    max-width: calc(100% - 40px);
+  }
+  .hero-overlay-tagline {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+  .story-card-float {
+    top: 16px;
+    right: 16px;
+    padding: 8px 12px;
+  }
+  .bestseller-card-float {
+    display: none;
+  }
+}
